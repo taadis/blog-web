@@ -7,7 +7,7 @@ app:
   cdn: "/static"
 
 mysql:
-  Dsn: "dev_user:dev_password@tcp(localhost:3306)/dev_database?timeout=2s&readTimeout=5s&writeTimeout=5s&parseTime=true&loc=Local&charset=utf8,utf8mb4"
+  Dsn: "dev_user:dev_password@tcp(mysql:3306)/dev_database?timeout=2s&readTimeout=5s&writeTimeout=5s&parseTime=true&loc=Local&charset=utf8,utf8mb4"
   ShowLog: true                   # 是否打印SQL日志
   MaxIdleConn: 10                 # 最大闲置的连接数，0意味着使用默认的大小2， 小于0表示不使用连接池
   MaxOpenConn: 60                 # 最大打开的连接数, 需要小于数据库配置中的max_connections数
