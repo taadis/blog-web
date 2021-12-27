@@ -24,8 +24,8 @@ WORKDIR /app
 
 COPY --from=builder /app/blog-web .
 COPY --from=builder /app/conf/dev.yml ./conf/
-COPY --from=builder /app/static/ .
-COPY --from=builder /app/tpl/ .
+COPY --from=builder /app/static/ ./static/
+COPY --from=builder /app/tpl/ ./tpl
 
 CMD ["/app/blog-web"]
 
