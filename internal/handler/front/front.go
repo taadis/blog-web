@@ -144,7 +144,7 @@ func (h *FrontHandler) Tag(w http.ResponseWriter, r *http.Request) {
 	tags, _ := bll.NewTagBll().GetTags(ctx)
 	data := make(map[string]interface{})
 	data["title"] = "标签"
-	data["description"] = "佛语的标签"
+	data["description"] = "标签"
 	data["tags"] = tags
 	view.Render(data, w, "tag")
 }
